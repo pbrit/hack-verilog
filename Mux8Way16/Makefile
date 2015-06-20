@@ -6,8 +6,11 @@ include ../macros.inc
 test: run
 	$(call run-test,Mux8Way16.cmp)
 
-run: hack_mux8_way16.v hack_mux8_way16_tb.v ../Mux16/hack_mux16.v ../Mux4Way16/hack_mux4_way16.v
-	iverilog -o run $^
+run: hack_mux8_way16.v hack_mux8_way16_tb.v ../Mux16/hack_mux16.v ../Mux4Way16/hack_mux4_way16.v ../Mux/hack_mux.v
+	$(call compile,$^)
+
+exec: run
+	./run
 
 clean: 
 	rm -f ./run

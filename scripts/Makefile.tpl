@@ -4,9 +4,9 @@ include ../macros.inc
 .PHONY: test clean
 
 test: run
-	$(call run-test,Mux16.cmp)
+	$(call run-test,%name%.cmp)
 
-run: hack_mux16.v hack_mux16_tb.v ../Mux/hack_mux.v
+run: hack_%name_underscore%.v hack_%name_underscore%_tb.v
 	$(call compile,$^)
 
 exec: run
@@ -14,7 +14,3 @@ exec: run
 
 clean: 
 	rm -f ./run
-
-
-
-
