@@ -1,7 +1,7 @@
 # -*- mode: make -*-
 # vi: set ft=ruby :
 # vi: set noexpandtab:
-
+SHELL=/bin/bash
 COMPILE_ARGS=-Wall
 
 define run-test

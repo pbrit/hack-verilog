@@ -1,20 +1,23 @@
 # vim: set noexpandtab:
+include macros.inc 
 
 .PHONY: test_all clean
 
 test_all:
-	cd And; make test
-	cd Mux8Way16; make test
-	cd Mux16; make test
-	cd Mux4Way16; make test
-	cd Mux; make test
+	@for entry in `ls -dtr */ | tr -d / | egrep -v '(scripts|tmp)'`; do  \
+		echo "*** Testing: $$entry"; \
+		cd $$entry;  \
+		make test; \
+		cd ..; \
+	done
 
 clean:
-	cd And; make clean
-	cd Mux8Way16; make clean
-	cd Mux16; make clean
-	cd Mux4Way16; make clean
-	cd Mux; make clean
+	@for entry in `ls -dtr */ | tr -d / | egrep -v '(scripts|tmp)'`; do  \
+		echo "*** Cleaning up: $$entry"; \
+		cd $$entry;  \
+		make clean; \
+		cd ..; \
+	done
 
 
 
