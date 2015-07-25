@@ -7,7 +7,7 @@ test_all:
 	@for entry in `ls -dtr */ | tr -d / | egrep -v '(scripts|tmp)'`; do  \
 		echo "*** Testing: $$entry"; \
 		cd $$entry;  \
-		make test; \
+		test -e WIP && echo WIP || make test; \
 		cd ..; \
 	done
 

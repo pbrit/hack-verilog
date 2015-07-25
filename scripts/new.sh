@@ -8,5 +8,6 @@ name=$1
 mkdir $name
 touch $name/hack_${name_underscore}.v
 touch $name/hack_${name_underscore}_tb.v
+touch $name/WIP
 
 cat scripts/Makefile.tpl | gsed -r "s/%name%/$name/g" | gsed -r "s/%name_underscore%/$name_underscore/g" > $name/Makefile

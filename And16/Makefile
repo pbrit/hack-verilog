@@ -4,9 +4,9 @@ include ../macros.inc
 .PHONY: test clean
 
 test: run
-	$(call run-test,%name%.cmp)
+	$(call run-test,And16.cmp)
 
-run: hack_%name_underscore%.v hack_%name_underscore%_tb.v ../hack_macros.v
+run: hack_and16.v hack_and16_tb.v
 	$(call compile,$^)
 
 exec: run

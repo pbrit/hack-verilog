@@ -1,0 +1,87 @@
+$date
+	Sun Jun 21 09:48:54 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hack_alu_tb $end
+$var wire 1 ! ng $end
+$var wire 16 " out [15:0] $end
+$var wire 1 # zr $end
+$var reg 1 $ f $end
+$var reg 1 % no $end
+$var reg 1 & nx $end
+$var reg 1 ' ny $end
+$var reg 16 ( x [15:0] $end
+$var reg 16 ) y [15:0] $end
+$var reg 1 * zx $end
+$var reg 1 + zy $end
+$scope module alu0 $end
+$var wire 1 , f $end
+$var wire 1 - no $end
+$var wire 1 . nx $end
+$var wire 1 / ny $end
+$var wire 16 0 x [15:0] $end
+$var wire 16 1 y [15:0] $end
+$var wire 1 2 zx $end
+$var wire 1 3 zy $end
+$var reg 16 4 effective_x [15:0] $end
+$var reg 16 5 effective_y [15:0] $end
+$var reg 1 6 ng $end
+$var reg 16 7 out [15:0] $end
+$var reg 1 8 zr $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+18
+b0 7
+06
+b0 5
+b0 4
+13
+12
+b1111111111111111 1
+b0 0
+0/
+0.
+0-
+1,
+1+
+1*
+b1111111111111111 )
+b0 (
+0'
+0&
+0%
+1$
+1#
+b0 "
+0!
+$end
+#3
+08
+0#
+b1 7
+b1 "
+b1111111111111111 5
+b1111111111111111 4
+1%
+1-
+1'
+1/
+1&
+1.
+#10
+b1111111111111111 7
+b1111111111111111 "
+b0 5
+0%
+0-
+0'
+0/
+#15
