@@ -28,7 +28,15 @@ Or8Way        |          |           |
 Module        | Behavior | Structure | Test coverage
 ------        | :------: | :-------: | :-----------:
 Bit           |    X     |           |       X
+Register      |          |     X     |       X
+RAM8          |
+RAM64         |
+RAM512        |
+RAM4K         |
 
 # Prerequisites
 
   * gsed (in script/add.sh)
+
+# Scripts
+  * scripts/new.sh 
